@@ -1,5 +1,3 @@
-import play.sbt.PlayImport.PlayKeys._
-
 name := "docker-swarm-controller"
 
 version := "0.1-SNAPSHOT"
