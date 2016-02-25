@@ -13,6 +13,6 @@ libraryDependencies ++= Seq(
 
 maintainer in Docker := "Sho Kohara <skohar@users.noreply.github.com>"
 
-dockerExposedPorts in Docker := Seq(9000, 9443)
+dockerExposedPorts in Docker := Seq(9000)
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
