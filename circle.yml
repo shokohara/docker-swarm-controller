@@ -1,0 +1,16 @@
+machine:
+  services:
+    - docker
+  java:
+    version: oraclejdk8
+dependencies:
+    - sbt clean test:compile
+test:
+  override:
+    - sbt test
+    - sbt docker:publishLocal
+deployment:
+  production:
+    branch: master
+    commands:
+      - ./deploy.sh

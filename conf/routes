@@ -1,0 +1,1 @@
+GET     /instances/swarm/manager        controllers.ApplicationController.findSwarmManager(git_repository_name: String, git_hash: String)
