@@ -9,6 +9,8 @@ libraryDependencies ++= Seq(
   "org.typelevel" %% "cats" % "0.4.1"
 )
 
+dockerRepository in Docker := Some("skohar")
+
 maintainer in Docker := "Sho Kohara <skohar@users.noreply.github.com>"
 
 dockerExposedPorts in Docker := Seq(9000)
