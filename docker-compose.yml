@@ -6,19 +6,10 @@ services:
       - "24224:24224"
     volumes:
       - data-fluentd:/fluentd/log
-  consul:
-    image: progrium/consul
+  play:
+    image: skohar/docker-swarm-controller
     ports:
-      - "8500:8500"
-    command: -server -bootstrap
-    logging:
-      driver: fluentd
-      options:
-        fluentd-address: localhost:24224
-  swarm:
-    image: swarm
-    ports:
-      - "4000:4000"
+      - "9000:9000"
     command: manage -H :4000 --replication --advertise 192.168.33.11:4000 consul://192.168.33.11:8500
     logging:
       driver: fluentd
